@@ -56,7 +56,7 @@ class StartScreen extends StatelessWidget {
 
                 GeneralButton(
                   buttonName: "Register",
-                  buttonColor: const Color(0xFF7B5E96),
+                  buttonColor: const Color.fromARGB(255, 15, 9, 21), 
                 ),
 
                 Spacer(),
@@ -70,7 +70,7 @@ class StartScreen extends StatelessWidget {
 }
 
 class SOYIcon extends StatelessWidget {
-  final int tamano;
+  final double tamano;
 
   const SOYIcon({
     super.key,
@@ -79,12 +79,12 @@ class SOYIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset('assets/images/img_logo_soy.png', height: 200);
+    return Image.asset('assets/images/img_logo_soy.png', height: tamano);
   }
 }
 
 class SOYText extends StatelessWidget {
-  final int tamano;
+  final double tamano;
 
   const SOYText({
     super.key,
@@ -93,11 +93,11 @@ class SOYText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       "SOY",
       style: TextStyle(
         color: Colors.white,
-        fontSize: 90,
+        fontSize: tamano,
         fontWeight: FontWeight.w400,
         fontStyle: FontStyle.italic,
       ),
