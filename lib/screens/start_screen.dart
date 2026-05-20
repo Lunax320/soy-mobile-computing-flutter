@@ -49,14 +49,14 @@ class StartScreen extends StatelessWidget {
 
                 GeneralButton(
                   buttonName: "Login",
-                  buttonColor: const Color(0xFFA461C1),
+                  buttonColor: Color(0xFFA461C1),
                 ),
 
                 const SizedBox(height: 20), // Entre Login y Register
 
                 GeneralButton(
                   buttonName: "Register",
-                  buttonColor: const Color.fromARGB(255, 15, 9, 21), 
+                  buttonColor: Color.fromARGB(255, 15, 9, 21), 
                 ),
 
                 Spacer(),
