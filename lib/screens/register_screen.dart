@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soy_mobile_computing_flutter/screens/start_screen.dart';
-import 'package:soy_mobile_computing_flutter/screens/login_screen.dart';
+import 'package:soy_mobile_computing_flutter/widgets/reusable_widget.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -35,14 +34,7 @@ class RegisterScreen extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              const Text(
-                "Full Name",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              FullNameText(),
 
               const SizedBox(height: 8),
 
@@ -53,18 +45,10 @@ class RegisterScreen extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              const Text(
-                "User",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              UserText(),
 
               const SizedBox(height: 8),
 
-              // Campo User
               const GeneralForm(
                 labelText: "User",
                 hintText: "Nombre de usuario",
@@ -72,14 +56,7 @@ class RegisterScreen extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              const Text(
-                "Email",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              EmailText(),
 
               const SizedBox(height: 8),
 
@@ -90,14 +67,7 @@ class RegisterScreen extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              const Text(
-                "Password",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              PasswordText(),
 
               const SizedBox(height: 8),
 
@@ -109,7 +79,6 @@ class RegisterScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // Botón Create Account (centrado)
               const Center(
                 child: GeneralButton(
                   buttonName: "Create Account",
@@ -119,6 +88,78 @@ class RegisterScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class PasswordText extends StatelessWidget {
+  const PasswordText({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "Password",
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+class EmailText extends StatelessWidget {
+  const EmailText({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "Email",
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+class UserText extends StatelessWidget {
+  const UserText({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "User",
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+class FullNameText extends StatelessWidget {
+  const FullNameText({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "Full Name",
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

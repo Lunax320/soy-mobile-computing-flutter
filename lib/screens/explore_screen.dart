@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soy_mobile_computing_flutter/screens/login_screen.dart';
-import 'package:soy_mobile_computing_flutter/screens/for_you_feed_screen.dart';
-
+import 'package:soy_mobile_computing_flutter/widgets/reusable_widget.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
@@ -33,7 +31,7 @@ class ExploreScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: const BottomNavigationBar(),
+      bottomNavigationBar: SOYBottomNavigationBar(),
     );
   }
 }

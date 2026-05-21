@@ -5,6 +5,7 @@ import 'package:soy_mobile_computing_flutter/screens/register_screen.dart';
 import 'package:soy_mobile_computing_flutter/screens/for_you_feed_screen.dart';
 import 'package:soy_mobile_computing_flutter/screens/explore_screen.dart';
 import 'package:soy_mobile_computing_flutter/screens/profile_screen.dart';
+import 'package:soy_mobile_computing_flutter/screens/create_review_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ProfileScreen()
+      home: StartScreen()
+      //home: LoginScreen()
+      //home: RegisterScreen()
+      //home: ForYouFeedScreen()
+      //home: ExploreScreen()
+      //home: ProfileScreen()
+      //home: CreateReviewScreen()
     ); // MaterialApp
   }
 }

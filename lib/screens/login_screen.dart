@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soy_mobile_computing_flutter/screens/start_screen.dart';
+import 'package:soy_mobile_computing_flutter/widgets/reusable_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -29,55 +29,30 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(width: 14),
                   const Padding(
                     padding: EdgeInsets.only(top: 75),
-                    child: SOYText(tamano: 60),
+                    child: 
+                    SOYText(tamano: 60),
                   ),
                 ],
               ),
 
               const SizedBox(height: 100),
 
-              // Label Email
-              const Text(
-                "Email",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              LabelEmail(),
 
               const SizedBox(height: 8),
-
-              // Campo Email
-              const GeneralForm(
-                labelText: "Email",
-                hintText: "correo@ejemplo.com",
-              ),
+           
+              EmailField(),
 
               const SizedBox(height: 16),
 
-              // Label Password
-              const Text(
-                "Password",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              LabelPassword(),
 
               const SizedBox(height: 8),
 
-              // Campo Password
-              GeneralForm(
-                labelText: "Password",
-                hintText: "Password",
-                isPassword: true,
-              ),
+              PasswordField(),
 
               const SizedBox(height: 50),
 
-              // Botón Login
               const GeneralButton(
                 buttonName: "Login",
                 buttonColor: Color(0xFFA461C1),
@@ -90,40 +65,66 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-class GeneralForm extends StatelessWidget {
-  final String labelText;
-  final String hintText;
-  final bool isPassword;
-
-  const GeneralForm({
+class PasswordField extends StatelessWidget {
+  const PasswordField({
     super.key,
-    required this.labelText,
-    this.hintText = "",
-    this.isPassword = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 70,
-      child: TextField(
-        obscureText: isPassword,
-        decoration: InputDecoration(
-          labelText: labelText,
-          labelStyle: const TextStyle(color: Colors.white),
-          hintText: hintText,
-          hintStyle: const TextStyle(color: Colors.white54),
-          filled: true,
-          fillColor: const Color(0xFF695E92),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: Color(0xFFA461C1), width: 2),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: Color(0xFFA461C1), width: 2),
-          ),
-        ),
+    return GeneralForm(
+      labelText: "Password",
+      hintText: "Password",
+      isPassword: true,
+    );
+  }
+}
+
+class LabelPassword extends StatelessWidget {
+  const LabelPassword({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "Password",
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+class EmailField extends StatelessWidget {
+  const EmailField({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const GeneralForm(
+      labelText: "Email",
+      hintText: "correo@ejemplo.com",
+    );
+  }
+}
+
+class LabelEmail extends StatelessWidget {
+  const LabelEmail({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "Email",
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

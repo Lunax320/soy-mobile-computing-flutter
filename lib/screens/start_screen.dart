@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soy_mobile_computing_flutter/widgets/reusable_widget.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -56,85 +57,12 @@ class StartScreen extends StatelessWidget {
 
                 GeneralButton(
                   buttonName: "Register",
-                  buttonColor: Color.fromARGB(255, 15, 9, 21), 
+                  buttonColor: Color(0xFF695E92), 
                 ),
 
                 Spacer(),
               ],
             ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class SOYIcon extends StatelessWidget {
-  final double tamano;
-
-  const SOYIcon({
-    super.key,
-    required this.tamano
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Image.asset('assets/images/img_logo_soy.png', height: tamano);
-  }
-}
-
-class SOYText extends StatelessWidget {
-  final double tamano;
-
-  const SOYText({
-    super.key,
-    required this.tamano
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      "SOY",
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: tamano,
-        fontWeight: FontWeight.w400,
-        fontStyle: FontStyle.italic,
-      ),
-    );
-  }
-}
-
-class GeneralButton extends StatelessWidget {
-  final String buttonName;
-  final Color buttonColor;
-
-  const GeneralButton({
-    super.key,
-    required this.buttonName,
-    required this.buttonColor,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 56,
-      width: double.infinity,
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          backgroundColor: buttonColor,
-          side: BorderSide(color: buttonColor),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-        ),
-        onPressed: () {},
-        child: Text(
-          buttonName,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 22,
-            fontWeight: FontWeight.w400,
           ),
         ),
       ),
